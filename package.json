@@ -1,0 +1,25 @@
+{
+  "name": "mystretchbreak",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codingtherapist/https---github.com-codingtherapist-myStretchApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codingtherapist/https---github.com-codingtherapist-myStretchApp/issues"
+  },
+  "homepage": "https://github.com/codingtherapist/https---github.com-codingtherapist-myStretchApp#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.17.2",
+    "serve-index": "^1.9.1"
+  }
+}
