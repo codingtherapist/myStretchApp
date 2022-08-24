@@ -8,18 +8,11 @@ Note: This web app is still under construction and may display errors when using
 
 
 
-![display of homepage of my stretch app application showing a woman stretching on laptop view with caption "Take a 5 minute stretch break", 5 minute timer, and buttons for body parts neck, shoulders, hands, eyes](public/img/mystretchapp.png)
+![display of homepage of my stretch app application showing a woman stretching on laptop view with caption "Take a 5 minute stretch break", 5 minute timer, and buttons for body parts neck, shoulders, hands, eyes](public/img/mystretchapp.png)<br><br>
 
 ![display of homepage in mobile view with html vscode open next to it](public/img/mobileview.png)
 
-![display of homepage of my stretch app application showing a woman stretching on laptop view with caption "Take a 5 minute stretch break", 5 minute timer, and buttons for body parts neck, shoulders, hands, eyes](/public/img/mystretchapp.png)
 
-![display of homepage in mobile view with html vscode open next to it](/public/img/mobileview.png)
-
-
-![display of homepage of my stretch app application showing a woman stretching on laptop view with caption "Take a 5 minute stretch break", 5 minute timer, and buttons for body parts neck, shoulders, hands, eyes](/img/mystretchapp.png)
-
-![display of homepage in mobile view with html vscode open next to it](/img/mobileview.png)
 
 
 
