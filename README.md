@@ -18,7 +18,7 @@ Note: This web app is still under construction and may display errors when using
 
 
 ## How It's Made:
-Tech used: HTML, CSS, JavaScript, Tech to be added: Nodejs, Express, MongoDB
+Tech used: HTML, CSS, JavaScript, Nodejs, Express
 
 - HTML was used to create the skeleton of the webpage and add information, including alt text to images and buttons.
 - Vanilla CSS was used to construct the style of the page, given a very simple format.
@@ -31,8 +31,6 @@ Javascript was used to add in functions for page elements including:
 - Resetting a timer while counting down from a set amount of seconds
 
 ## To be added:
-
-- Adding in working "resetTimer" and "stopTimer" function
 - Backend functions including bringing timer function serverside
 - Creating a database of images and gifs that include yoga poses categorized by body part to increase speed and efficiency
 
@@ -56,4 +54,5 @@ To be added:
 - How to style CSS so that images from multiple containers can display in one area while leaving elements hidden until called
 
 - How to style CSS so that images from multiple containers can display in one area while leaving elements hidden until called
+- Creating a SHH key
 
