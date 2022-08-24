@@ -149,7 +149,7 @@ const state = {
 	  visible: false,
 	  container: "#eyesup",
 	  uiElement: "#eyesnext",
-	  images: ["eyes/thumbGazingg.gif", "eyes/figureEight.gif"],
+	  images: ["eyes/thumbGazingg.gif", "eyes/figureEight.gif", "eyes/eyePalm.gif"],
 	},
 	neck: {
 	  visible: false,
