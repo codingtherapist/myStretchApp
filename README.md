@@ -1,7 +1,7 @@
 # My Stretch App
 This full-stack web application is for tech professionals who work at a computer all day. It allows users to set a 5-minute timer for a stretch break at the top of each hour. Users can click on which body part they would like to focus on during their break, which will display a gif from an array of images randomly on click.
 
-Link to project: https://mystretchapp.netlify.app/
+Link to project: https://mystretchbreak.netlify.app/
 
 Note: This web app is still under construction and may display errors when using the live link.
 
