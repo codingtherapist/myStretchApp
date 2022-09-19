@@ -3,7 +3,35 @@ const app = express()
 const cors = require('cors')
 require('dotenv').config()
 const PORT = 1114
- 
+const MongoClient = require('mongodb').MongoClient;
+const mongoose = require('mongoose');
+// or as an es module:
+// import { MongoClient } from 'mongodb'
+
+// Connection URL
+const url = 'mongodb://localhost:27017';
+const client = new MongoClient(url);
+
+// Database Name
+const dbName = 'myStretchApp';
+
+async function main() {
+  // Use connect method to connect to the server
+  await client.connect();
+  console.log('Connected successfully to server');
+  const db = client.db(dbName);
+  const collection = db.collection('documents');
+
+  // the following code examples can be pasted here...
+
+  return 'done.';
+}
+
+main()
+  .then(console.log)
+  .catch(console.error)
+  .finally(() => client.close());
+
 
 //json ojects?
 const majorArcana = { //setting up all the cards within an object (look at rappers-api for where I got inspiration from)
