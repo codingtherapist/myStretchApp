@@ -1,65 +1,56 @@
 const express = require('express')
 const app = express()
 const cors = require('cors')
-require('dotenv').config()
-const PORT = 1114
 const MongoClient = require('mongodb').MongoClient;
 const mongoose = require('mongoose');
-// or as an es module:
-// import { MongoClient } from 'mongodb'
+const passport = require("passport");
+const session = require("express-session");
+const MongoStore = require("connect-mongo");
+const methodOverride = require("method-override");
+const flash = require("express-flash");
+const logger = require("morgan");
+const connectDB = require("./config/database");
+const router = express.Router()
+const mainRoutes = require("./routes/main");
+const postRoutes = require("./routes/posts");
+const commentRoutes = require("./routes/comments");
 
-// Connection URL
-const url = 'mongodb://localhost:27017';
-const client = new MongoClient(url);
+//Use .env file in config folder
+require("dotenv").config({ path: "./config/.env" });
 
-// Database Name
-const dbName = 'myStretchApp';
+// Passport config
+require("./config/passport")(passport);
 
-async function main() {
-  // Use connect method to connect to the server
-  await client.connect();
-  console.log('Connected successfully to server');
-  const db = client.db(dbName);
-  const collection = db.collection('documents');
+//Connect To Database
+connectDB();
 
-  // the following code examples can be pasted here...
+//Using EJS for views
+app.set("view engine", "ejs");
 
-  return 'done.';
-}
+//Static Folder
+app.use(express.static("public"));
 
-main()
-  .then(console.log)
-  .catch(console.error)
-  .finally(() => client.close());
+//Body Parsing
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
+//Logging
+app.use(logger("dev"));
 
-//json ojects?
-const majorArcana = { //setting up all the cards within an object (look at rappers-api for where I got inspiration from)
-    1:{ 
-        cardFront: "The Fool",
-        cardBack: "Think about new beginnings. Focus on finding your inner innocence, be a little more spontanious and free spirited today",
-        imgurl: "https://philosopherswheel.com/foolB.jpg", // borrowed images!
-        reversed: false // I added this for later when I want to be able to use CSS to flip the image upside down
-    },
-}
+//Use forms for put / delete
+app.use(methodOverride("_method"));
 
 
-app.get('/', async (request, response) => {
-    try {
-        response.sendFile( __dirname + "/public/index.html")
-    } catch (error) {
-        response.status(500).send({message: error.message})
-    }
-})
 
-app.get('/newCard', async (request, response) =>{
-    let math = Math.ceil( Math.random() * 44) // honestly the same mechanic as my coin flip to get a random number 1-44 and send back as json
-    try { 
-        response.json(majorArcana[math]) //this is the heavy lifter using the random number generator, if there is a thing that is essentially withing the object majorArcana and the result of the math, send it back to the main.js as JSON.  If I had kept the card names, it would have had to read something like majorArcana[variable] variable == "The Moon" to be able to respond. Which would have required setting up whatever variable AND tying that varaible to the math. I preferred to skip that step, though it's probably not best practice (feels very baddie and I will not apologize). 
-    } catch (error) {
-        response.status(500).send({message: error.message})
-    }
-}) 
+// Setup Sessions - stored in MongoDB
+/*app.use(
+    session({
+      secret: "keyboard cat",
+      resave: false,
+      saveUninitialized: false,
+      store: new MongoStore({ mongooseConnection: mongoose.connection }),
+    })
+  );*/
 
 // middleware
 app.set('view engine', 'ejs') //helps parse ejs
@@ -70,8 +61,20 @@ app.use(cors() )
  //prevent cross object requests
  
  
-//app.listen(1114, () => console.log('Server is running on port 1114 yay'))
+// Passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
 
+//Use flash messages for errors, info, ect...
+app.use(flash());
+
+//Setup Routes For Which The Server Is Listening
+app.use("/", mainRoutes);
+app.use("/posts", postRoutes);
+app.use("/comments", commentRoutes);
+
+
+//server running
 app.listen(process.env.PORT || PORT, () => {
-    console.log(`Server is running on port ${PORT} yay` )
+    console.log(`Server is running, yay!` )
 })
