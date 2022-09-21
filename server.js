@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const cors = require('cors')
-const MongoClient = require('mongodb').MongoClient;
+//const MongoClient = require('mongodb').MongoClient;
 const mongoose = require('mongoose');
 const passport = require("passport");
 const session = require("express-session");
@@ -10,7 +10,7 @@ const methodOverride = require("method-override");
 const flash = require("express-flash");
 const logger = require("morgan");
 const connectDB = require("./config/database");
-const router = express.Router()
+//const router = express.Router()
 const mainRoutes = require("./routes/main");
 const postRoutes = require("./routes/posts");
 const commentRoutes = require("./routes/comments");
@@ -23,6 +23,41 @@ require("./config/passport")(passport);
 
 //Connect To Database
 connectDB();
+
+/*
+//original
+// Connection URL
+const url = 'mongodb://localhost:27017';
+const client = new MongoClient(url);
+
+// Database Name
+const dbName = 'myStretchApp';
+
+async function main() {
+  // Use connect method to connect to the server
+  await client.connect();
+  console.log('Connected successfully to server');
+  const db = client.db(dbName);
+  const collection = db.collection('documents');
+  // the following code examples can be pasted here...
+  return 'done.';
+}
+
+main()
+  .then(console.log)
+  .catch(console.error)
+  .finally(() => client.close());
+
+
+app.get('/', async (request, response) => {
+    try {
+        response.sendFile( __dirname + "/public/index.html")
+    } catch (error) {
+        response.status(500).send({message: error.message})
+    }
+})
+
+*/
 
 //Using EJS for views
 app.set("view engine", "ejs");
@@ -41,16 +76,15 @@ app.use(logger("dev"));
 app.use(methodOverride("_method"));
 
 
-
-// Setup Sessions - stored in MongoDB
-/*app.use(
+ //Setup Sessions - stored in MongoDB
+app.use(
     session({
-      secret: "keyboard cat",
+      secret: "mybooLean",
       resave: false,
       saveUninitialized: false,
-      store: new MongoStore({ mongooseConnection: mongoose.connection }),
+      //store: new MongoStore({ mongooseConnection: mongoose.connection }),
     })
-  );*/
+  );
 
 // middleware
 app.set('view engine', 'ejs') //helps parse ejs
