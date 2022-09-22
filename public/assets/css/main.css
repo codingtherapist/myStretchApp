@@ -75,7 +75,6 @@ input, select, textarea {
 
 /*additions!!!!*/
 .firstcontainer {
-	width: ;
 	height:30%;
 	padding: 20px;
 	margin: 20px;
@@ -85,6 +84,16 @@ input, select, textarea {
 	display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.centerrow{
+	margin: auto;
+	width: 50%;
+	padding: 10px;
+}
+
+.centertext{
+	align-items: center
 }
 
 .firstwrapper {
@@ -108,15 +117,6 @@ img{
 	margin: 20px;
 }
 
-.bodypartsbox{
-
-}
-#stretchbuttons{
-	/*padding: 20px;
-	margin: 20px;
-	width: 50%;*/
-
-}
 /*.hidden {
 	/*display: none;
 	visibility: hidden;*/
@@ -178,7 +178,7 @@ img{
 /*comment box*/
 .pb-cmnt-container {
 	font-family: Lato;
-	margin-top: 100px;
+	margin-top: 10px;
 }
 
 .pb-cmnt-textarea {

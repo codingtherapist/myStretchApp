@@ -1,8 +1,8 @@
-const express = require('express')
+const express = require("express")
 const app = express()
-const cors = require('cors')
+//const cors = require('cors')
 //const MongoClient = require('mongodb').MongoClient;
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const passport = require("passport");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
@@ -14,6 +14,7 @@ const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
 const postRoutes = require("./routes/posts");
 const commentRoutes = require("./routes/comments");
+
 
 //Use .env file in config folder
 require("dotenv").config({ path: "./config/.env" });
@@ -77,22 +78,23 @@ app.use(methodOverride("_method"));
 
 
  //Setup Sessions - stored in MongoDB
-app.use(
+ app.use(
     session({
-      secret: "mybooLean",
+      secret: "keyboard cat",
       resave: false,
       saveUninitialized: false,
-      //store: new MongoStore({ mongooseConnection: mongoose.connection }),
+      store: MongoStore.create ({ mongoUrl: 'mongodb+srv://africakenyah:aPCh3jb8BemnsQn@stretches.cdqkyto.mongodb.net/?retryWrites=true&w=majority',
+     })
     })
   );
 
-// middleware
+/*// middleware
 app.set('view engine', 'ejs') //helps parse ejs
 app.use(express.static('public') ) //tells where to go for static files HTML/CSS
 app.use(express.urlencoded ( {extended:true} ) ) //how to handle URLs
 app.use(express.json() ) //allows use of JSON for objects
 app.use(cors() )
- //prevent cross object requests
+ //prevent cross object requests*/
  
  
 // Passport middleware
@@ -104,8 +106,8 @@ app.use(flash());
 
 //Setup Routes For Which The Server Is Listening
 app.use("/", mainRoutes);
-app.use("/posts", postRoutes);
-app.use("/comments", commentRoutes);
+app.use("/post", postRoutes);
+app.use("/comment", commentRoutes);
 
 
 //server running

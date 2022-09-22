@@ -1,0 +1,22 @@
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// Toggle global options
+//$enable-gradients: true;
+//$enable-shadows: true;
+
+//Default Variable Overrides
+// scss-docs-start theme-color-variables
+$primary: yellow;
+$body-bg: red;
+//$secondary:     $gray-600 !default;
+//$success:       $green !default;
+//$info:          $cyan !default;
+//$warning:       $yellow !default;
+//$danger:        $red !default;
+//$light:         $gray-100 !default;
+//$dark:          $gray-900 !default;
+
+@import "../node_modules/bootstrap/scss/bootstrap";

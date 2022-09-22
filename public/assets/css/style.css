@@ -1,0 +1,42 @@
+.firstcontainer {
+	height:30%;
+	padding: 20px;
+	margin: 20px;
+}
+
+.red {
+    color: red;
+    border: 1px solid red;
+}
+
+.center {
+	display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.centerrow{
+	margin: auto;
+	width: 50%;
+	padding: 10px;
+}
+
+.centertext{
+	align-items: center
+}
+
+.firstwrapper {
+	height: 500px;
+}
+
+#stretchcontainer{
+	
+	display: flex;
+  align-items: center;
+  justify-content: center;
+ padding: 30px;
+}
+
+img{
+	border-radius: 25%;
+}

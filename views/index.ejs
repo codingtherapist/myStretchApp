@@ -1,4 +1,4 @@
-
+<%- include('partials/header') -%>
 	<!DOCTYPE HTML>
 	<!--
 		Story by Pixelarity
@@ -10,8 +10,9 @@
 			<title>My Stretch Break</title>
 			<meta charset="utf-8" />
 			<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-			<link rel="stylesheet" href="assets/css/main.css" />
-			<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+			<link rel="stylesheet" href="assets/css/main.css" />	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+			<!--Bootstrap
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
 		</head>
 		<body class="is-preload">
 	
@@ -40,7 +41,7 @@
 		  <div class="" class="firstcontainer" >
 			<img id="eyesup" class="hidden" src="img/floaty.png" />
 		</div>
-
+<!-- Timer -->
 		<div class="selectioncontainer">
 			<div class="center" id="app">
 			</div>
@@ -49,33 +50,45 @@
 				<input type="button" " onclick="pauseTimer()" value="Pause"/>
 				<input type="button" onclick="resetTimer()" value="Reset" /><br><br>
 			</div><br><br>
-
+<!-- Stretchbox -->
 			<div class="bodypartsbox" id="stretchbuttons">
 				<h2 class="center">Choose a body part to stretch</h2>
 				<p></p>
-				<div class= "center" >
+				<div class= "center" id="timerbuttons" >
+					<input type="button" " id="eyesnext" value="eyes"/>
+					<input type="button" " id="necknext" value="Neck"/>
+					<input type="button" " id="shouldersnext" value="Shoulders"/>
+					<input type="button" " id="handnext" value="Hands"/>
+					<!--
 					<div class="click"><button id="eyesnext">Eyes</button></div>
 					<div class="click"><button id="shouldersnext">Shoulders</button></div>
 					<div class="click"><button id="handnext">Hands</button></div>
-					<div class="click"><button id="necknext">Neck</button></div>
+					<div class="click"><button id="necknext">Neck</button></div>-->
 				</div>
 			</div>
 		</div>
 	</section>
 <!--MY STRETCH DIARY AREA-->
-	<section class=" banner style1 spotlight  image-position-center onscroll-image-fade-in " id="stretchcontainer" >
+	<section class="centerrow" id="" >
+		<h2>My Stretch Diary</h2>
+		<p>How are you feeling today?<br> What are you working on?</p>
 		<div class="container pb-cmnt-container">
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3">
 					<div class="panel panel-info">
 						<div class="panel-body">
-							<textarea placeholder="Write your comment here!" class="pb-cmnt-textarea"></textarea>
-							<form class="form-inline">
-								<div class="btn-group">
-									<button class="btn" type="button"><span class="fa fa-picture-o fa-lg"></span></button>
-									<button class="btn" type="button"><span class="fa fa-video-camera fa-lg"></span></button>
+							<textarea placeholder="Log in to write your entry here!" class="pb-cmnt-textarea"></textarea>
+							<form class="form-inline center">
+							
+						<br><br>
+						<a href="" class="" ><button>Share</button></a>
+									<a href=" type="button" >Share</a>
+
+									<a href="/login" id="timerbuttons" >Login</a>
+									<a href="/signup" type="button" >Sign up</a>
+
+									<a href="/signup" class=""><button>Signup</button></a>
 								</div>
-								<button class="btn btn-primary pull-right" type="button">Share</button>
 							</form>
 						</div>
 					</div>
@@ -104,6 +117,11 @@
 
 
 	<!-- Scripts -->
+	<!--Bootstrap-->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 	<script type="module">
 		// Import the functions you need from the SDKs you need
 		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
