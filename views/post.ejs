@@ -26,6 +26,16 @@
           <p><%= post.caption %></p>
         </div>
         <%}%>
+        <ul>
+      <% for(var i=0; i<post.length; i++) {%>
+        <li class="col-6 justify-content-between mt-5 p-3 mb-2 bg-light text-darkt">
+      
+          <p><%= comments[i].comment%></p>
+          <span class="commentSpan">Date: <%= comments[i].createdAt.toLocaleDateString("en-US")%></span>
+          <p>User: <%= user.userName %></p>
+        </li>
+      <% } %>
+    </ul>
       </div>
       </div>
     </div>
@@ -48,9 +58,6 @@
           <p><%= comments[i].comment%></p>
           <span class="commentSpan">Date: <%= comments[i].createdAt.toLocaleDateString("en-US")%></span>
           <p>User: <%= user.userName %></p>
-    
-     
-  
         </li>
       <% } %>
     </ul>

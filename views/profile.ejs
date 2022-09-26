@@ -2,7 +2,7 @@
 
 
 <main class="container">
-  <h1 class="mb-5 mt-5"> My Profile</h1>
+  <h1 class="mb-5 mt-5"> My Break Journal</h1>
     <div class="row justify-content-center">
       <div class="col-6">
           <div>
@@ -26,21 +26,23 @@
             </form>
           </div>
       </div>
-      <div class="col-6">
+    
+
+  
+      <div class="col-7">
         <ul class="row list-unstyled">
         <% for(var i=0; i<posts.length; i++) {%>
-          <li class="col-6 justify-content-between mt-5">
+          <div class="col-10 justify-content-between mt-5 border p-3 mb-2 bg-light text-dark">
+            <li class="col-6 justify-content-between mt-5">
             <a href="/post/<%= posts[i]._id%>">
               <img class="img-fluid" src="<%= posts[i].image%>">
             </a>
           </li>
+          </div>
         <% } %>
         </ul> 
-        
       </div>  
     </div>
-  </div>
-</div>
-</main>
+  </main>
 
 <%- include('partials/footer') -%>

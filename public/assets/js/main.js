@@ -1,8 +1,3 @@
-/*
-	Story by Pixelarity
-	pixelarity.com | hello@pixelarity.com
-	License: pixelarity.com/license
-*/
 //timer object
 //}//DECLARE:
 
@@ -143,6 +138,14 @@ function resetTimer() {
   setRemainingPathColor(timeLeft);
 }
 
+//test 2
+
+
+
+
+
+
+
 //stretch images
 const state = {
 	eyes: {
@@ -155,7 +158,7 @@ const state = {
 	  visible: false,
 	  container: "#eyesup",
 	  uiElement: "#necknext",
-	  images: ["neck/neckPull.jpg", "neck/neckturn.gif"],
+	  images: ["neck/neckPull.jpg", "neck/neckTurn.gif"],
 	},
 	shoulders: {
 	  visible: false,

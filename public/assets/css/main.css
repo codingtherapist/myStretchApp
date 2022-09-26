@@ -74,6 +74,10 @@ input, select, textarea {
 
 
 /*additions!!!!*/
+li {
+	display: inline;
+  }
+
 .firstcontainer {
 	height:30%;
 	padding: 20px;
