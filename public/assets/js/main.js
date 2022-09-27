@@ -158,7 +158,7 @@ const state = {
 	  visible: false,
 	  container: "#eyesup",
 	  uiElement: "#necknext",
-	  images: ["neck/neckPull.jpg", "neck/neckTurn.gif"],
+	  images: ["neck/neckPull.jpg", "neck/neckturn.gif"],
 	},
 	shoulders: {
 	  visible: false,
