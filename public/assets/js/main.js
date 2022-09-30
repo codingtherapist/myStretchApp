@@ -152,30 +152,55 @@ const state = {
 	  visible: false,
 	  container: "#eyesup",
 	  uiElement: "#eyesnext",
-	  images: ["eyes/thumbGazingg.gif", "eyes/figureEight.gif", "eyes/eyePalm.gif"],
+	  images: [
+		],
 	},
 	neck: {
 	  visible: false,
 	  container: "#eyesup",
 	  uiElement: "#necknext",
-	  images: ["neck/neckPull.jpg", "neck/neckturn.gif"],
+	  images: [ 
+		"https://res.cloudinary.com/dtamwfybo/image/upload/c_scale,w_400/v1664551879/Untitled_design_85_qbmnql.png",
+		"https://res.cloudinary.com/dtamwfybo/image/upload/c_scale,w_400/v1664551879/Untitled_design_82_ksinyk.png",
+		"https://res.cloudinary.com/dtamwfybo/image/upload/c_scale,w_400/v1664553927/Untitled_design_95_jeoakb.png",
+	]
 	},
 	shoulders: {
 	  visible: false,
 	  container: "#eyesup",
 	  uiElement: "#shouldersnext",
 	  images: [
-		"shoulders/overheadStretch.jpg",
-		"shoulders/posthandclasp.gif",
-		"shoulders/shoulderCross.gif",
-		"shoulders/shoulderpress.gif",
+		"https://res.cloudinary.com/dtamwfybo/image/upload/c_scale,w_400/v1663954382/jv8cwrzjwsiu27ui2ueb.png",
+		"https://res.cloudinary.com/dtamwfybo/image/upload/c_scale,w_400/v1664297241/stretches/3_doyiem.png", 
+		"https://res.cloudinary.com/dtamwfybo/image/upload/v1664196659/stretches/armCross_tfaiia.png",
+		"https://res.cloudinary.com/dtamwfybo/image/upload/c_scale,w_400/v1664551879/Untitled_design_86_z6lxlj.png",
+		"https://res.cloudinary.com/dtamwfybo/image/upload/c_scale,w_400/v1664551881/Untitled_design_88_uvunkb.png",
+		"https://res.cloudinary.com/dtamwfybo/image/upload/c_scale,w_400/v1663955032/drsgh1vfvvrmmog1siut.png",
+		"https://res.cloudinary.com/dtamwfybo/image/upload/c_scale,w_400/v1664553927/Untitled_design_95_jeoakb.png",
 	  ],
 	},
 	hands: {
 	  visible: false,
 	  container: "#eyesup",
 	  uiElement: "#handnext",
-	  images: ["hands/reversePrayerMod.jpg", "hands/pronations.gif"],
+	  images: [
+		"https://res.cloudinary.com/dtamwfybo/image/upload/c_scale,w_400/v1664550218/Untitled_design_64_uwfic5.png", 
+		"https://res.cloudinary.com/dtamwfybo/image/upload/c_scale,w_400/v1664550220/Untitled_design_67_fnkxn9.png",
+		"https://res.cloudinary.com/dtamwfybo/image/upload/c_scale,w_400/v1664550220/Untitled_design_66_g3tgrn.png",
+		"https://res.cloudinary.com/dtamwfybo/image/upload/c_scale,w_400/v1664550220/Untitled_design_69_qnzfmj.png",
+		"https://res.cloudinary.com/dtamwfybo/image/upload/c_scale,w_400/v1664550220/Untitled_design_63_a5y9tk.png",
+		"https://res.cloudinary.com/dtamwfybo/image/upload/c_scale,w_400/v1664550224/Untitled_design_70_y4gkoi.png",
+		"https://res.cloudinary.com/dtamwfybo/image/upload/c_scale,w_400/v1664550224/Untitled_design_72_lgkwee.png",
+		"https://res.cloudinary.com/dtamwfybo/image/upload/c_scale,w_400/v1664550228/Untitled_design_73_atqw71.png",
+		"https://res.cloudinary.com/dtamwfybo/image/upload/c_scale,w_400/v1664550274/Untitled_design_81_tvwxgl.png",
+		"https://res.cloudinary.com/dtamwfybo/image/upload/c_scale,w_400/v1664551882/Untitled_design_93_kmkzph.png",
+		"https://res.cloudinary.com/dtamwfybo/image/upload/c_scale,w_400/v1664551882/Untitled_design_89_zevgrh.png",
+		"https://res.cloudinary.com/dtamwfybo/image/upload/c_scale,w_400/v1664551883/Untitled_design_91_hkr07h.png",
+		"https://res.cloudinary.com/dtamwfybo/image/upload/c_scale,w_400/v1664551883/Untitled_design_92_ccdbay.png",
+		"https://res.cloudinary.com/dtamwfybo/image/upload/c_scale,w_400/v1664551883/Untitled_design_90_gqlzc0.png",
+		"https://res.cloudinary.com/dtamwfybo/image/upload/c_scale,w_400/v1663955032/drsgh1vfvvrmmog1siut.png",
+
+	],
 	},
   };
   // Most JS frameworks have some kind of starting point, an initialization step where things are set up. This is the crude vanilla version of that.
@@ -249,7 +274,7 @@ const state = {
 	  const randomPick = Math.floor(Math.random() * item.images.length);
 	  // the below is basically copy/paste from your previous code
 	  const currentDOMNode = document.querySelector(item.container);
-	  currentDOMNode.src = `img/${item.images[randomPick]}`;
+	  currentDOMNode.src = `${item.images[randomPick]}`;
 	  currentDOMNode.classList.toggle("hidden");
 	}
   
