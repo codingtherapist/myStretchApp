@@ -12,7 +12,9 @@ Note: This web app is still under construction and may display errors when using
 
 ![display of homepage in mobile view with html vscode open next to it](public/img/mobileview.png)
 <br><br>
+
 ![display of homepage in mobile view with html vscode open next to it](public/img/wire1.png)
+
 ![display of homepage in mobile view with html vscode open next to it](public/img/wire2.png)
 
 
