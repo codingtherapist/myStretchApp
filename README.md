@@ -13,10 +13,6 @@ Note: This web app is still under construction and may display errors when using
 ![display of homepage in mobile view with html vscode open next to it](https://res.cloudinary.com/dtamwfybo/image/upload/v1665518880/Untitled_design_3_qrni9s.gif)
 <br><br>
 
-![display of homepage in mobile view with html vscode open next to it](https://res.cloudinary.com/dtamwfybo/image/upload/v1665518366/wire1_cmlcju.png)
-
-![display of homepage in mobile view with html vscode open next to it](https://res.cloudinary.com/dtamwfybo/image/upload/v1665518366/wire2_swux3k.png)
-
 
 
 
@@ -37,6 +33,12 @@ Javascript was used to add in functions for page elements including:
 
 NodeJS was used for all backend routes
 -Create, Read, Update and Delete functions were created with information being sent to and pulled from MongoDB.
+
+
+![display of homepage in mobile view with html vscode open next to it](https://res.cloudinary.com/dtamwfybo/image/upload/v1665518366/wire1_cmlcju.png)
+
+![display of homepage in mobile view with html vscode open next to it](https://res.cloudinary.com/dtamwfybo/image/upload/v1665518366/wire2_swux3k.png)
+
 
 ## Optimizations To be added:
 - Backend functions including bringing timer and stretch function serverside
