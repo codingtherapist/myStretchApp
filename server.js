@@ -13,7 +13,7 @@ const connectDB = require("./config/database");
 //const router = express.Router()
 const mainRoutes = require("./routes/main");
 const postRoutes = require("./routes/posts");
-const todoRoutes = require("./routes/todos");
+
 
 
 //Use .env file in config folder
