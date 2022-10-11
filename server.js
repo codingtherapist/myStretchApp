@@ -107,7 +107,7 @@ app.use(flash());
 
 app.use("/", mainRoutes);
 app.use("/post", postRoutes);
-app.use("/comment", commentRoutes);
+//app.use("/comment", commentRoutes);
 
 
 //server running
