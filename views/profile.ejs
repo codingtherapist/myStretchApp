@@ -9,10 +9,11 @@
               <p><strong>User Name</strong>: <%= user.userName %></p>
               <p><strong>Email</strong>: <%= user.email %></p>
               <a href="/logout" class=" btn btn-outline-secondary">Logout</a>
-              <a class="btn btn-outline-secondary" href="/feed">Return to Feed</a>
+              <a class="btn btn-outline-secondary" href="/">Return to Stretches</a>
           </div>
           <div class="mt-5">
-            <h2>Add a post</h2>
+      
+            <h2>Add a photo</h2>
             <form action="/post/createPost" enctype="multipart/form-data" method="POST">
               <div class="mb-3">
                 <label for="caption" class="form-label">Caption</label>
@@ -24,28 +25,58 @@
               </div>
               <button type="submit" class="btn btn-outline-secondary" value="Upload">Submit</button>
             </form>
+            Note: This web app is in beta testing. At this time you can only post photos with captions. Feel free to add a placeholder photo if you'd like to use this as a journal entry area. The ability to add comments without a photo attachement and to add a profile picture is coming soon :)
+            
           </div>
       </div>
+     
+     
+     <!-- <form action="/todos/createTodo" method='POST'>
+        <input type="text" placeholder="Enter Todo Item" name='todoItem'>
+        <input type="submit">
+    </form>-->
+        <!--<div class="mt-1">
+        <h2>Add a comment</h2>
+        <form action="/comment/createComment/" method="POST">
+          <div class="mb-3">
+              <label for="comment" class="form-label">Comment</label>
+              <input type="text" class="form-control" id="comment" name="comment">
+          </div>
+          <button type="submit" class="btn btn-outline-secondary">Submit</button>
+        </form>
+      </div>-->
+     
+    
     
 
   
-      <div class="col-7">
+      <div class="col-8">
+     
         <ul class="row list-unstyled">
+          <br><br> 
+          <h2 class="centered"></h2>
         <% for(var i=0; i<posts.length; i++) {%>
           <div class="col-10 justify-content-between mt-5 border p-3 mb-2 bg-light text-dark">
+          
+            <li>   <div class="col-12 mt-1 text-center">
+          
+              <p>Date: <%= posts[i].createdAt.toLocaleDateString("en-US")%></p>
+            </div></li>
             <li class="col-6 justify-content-between mt-5">
             <a href="/post/<%= posts[i]._id%>">
               <img class="img-fluid" src="<%= posts[i].image%>">
             </a>
           </li>
           <li>   <div class="col-12 mt-1 text-center">
-            <p><%= posts.caption %></p>
+            <p>"<%= posts[i].caption%>"</p>
+            
           </div></li>
           </div>
         <% } %>
         </ul> 
       </div>  
     </div>
+
   </main>
 
 <%- include('partials/footer') -%>

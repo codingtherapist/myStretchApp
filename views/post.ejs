@@ -3,7 +3,9 @@
   <div class="row justify-content-center mt-5">
     <div class="col-6">
       <div class="col-10 justify-content-between mt-5 border p-3 mb-2 bg-light text-dark">
+        
       <h2 class="text-center"><%= post.title %></h2>
+ 
       <img class="img-fluid" src="<%= post.image%>" />
       <div class="row justify-content-between">
         <form
@@ -26,22 +28,12 @@
           <p><%= post.caption %></p>
         </div>
         <%}%>
-        <ul>
-      <% for(var i=0; i<post.length; i++) {%>
-        <li class="col-6 justify-content-between mt-5 p-3 mb-2 bg-light text-darkt">
-      
-          <p><%= comments[i].comment%></p>
-          <span class="commentSpan">Date: <%= comments[i].createdAt.toLocaleDateString("en-US")%></span>
-          <p>User: <%= user.userName %></p>
-        </li>
-      <% } %>
-    </ul>
       </div>
       </div>
     </div>
    
     
-    <div class="mt-1">
+    <!--<div class="mt-1">
       <h2>Add a comment</h2>
       <form action="/comment/createComment/<%=post._id%>" method="POST">
         <div class="mb-3">
@@ -58,6 +50,9 @@
           <p><%= comments[i].comment%></p>
           <span class="commentSpan">Date: <%= comments[i].createdAt.toLocaleDateString("en-US")%></span>
           <p>User: <%= user.userName %></p>
+    
+     
+  
         </li>
       <% } %>
     </ul>
@@ -66,6 +61,6 @@
       <a class="btn btn-outline-secondary" href="/feed">Return to Feed</a>
     </div>
   </div>
-</div>
+</div>-->
 
 <%- include('partials/footer') -%>

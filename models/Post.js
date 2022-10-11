@@ -8,7 +8,7 @@ const PostSchema = new mongoose.Schema({
   },
   cloudinaryId: {
     type: String,
-    require: true,
+    require: false,
   },
   caption: {
     type: String,
@@ -17,6 +17,10 @@ const PostSchema = new mongoose.Schema({
   likes: {
     type: Number,
     required: true,
+  },
+  comment: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Comment",
   },
   user: {
     type: mongoose.Schema.Types.ObjectId,

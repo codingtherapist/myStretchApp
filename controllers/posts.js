@@ -6,7 +6,8 @@ module.exports = {
   getProfile: async (req, res) => {
     try {
       const post = await Post.find({ user: req.user.id });
-      res.render("profile.ejs", { posts: post, user: req.user });
+      const comment = await Comment.find({  user: req.user.id })
+      res.render("profile.ejs", { posts: post, user: req.user, comments:comment });
     } catch (err) {
       console.log(err);
     }
@@ -15,6 +16,19 @@ module.exports = {
     try {
       const posts = await Post.find().sort({ createdAt: "desc" }).lean();
       res.render("feed.ejs", { posts: posts });
+    } catch (err) {
+      console.log(err);
+    }
+  },
+  createComment: async (req, res) => {
+    try {
+      await Comment.create({
+        comment: req.body.comment,
+       // likes: 0,
+        post: req.params.id,
+      });
+      console.log("Comment has been added!");
+      res.redirect("/profile");
     } catch (err) {
       console.log(err);
     }
@@ -30,9 +44,10 @@ module.exports = {
   },
   createPost: async (req, res) => {
     try {
+      console.log('starting to make req')
       // Upload image to cloudinary
       const result = await cloudinary.uploader.upload(req.file.path);
-
+      console.log('hi this is it', result)
       await Post.create({
         title: req.body.title,
         image: result.secure_url,
@@ -47,6 +62,7 @@ module.exports = {
       console.log(err);
     }
   },
+
   likePost: async (req, res) => {
     try {
       await Post.findOneAndUpdate(

@@ -191,6 +191,8 @@ const state = {
 		"https://res.cloudinary.com/dtamwfybo/image/upload/v1664560954/eyePalm_26_bcqoqz.gif",
 		"https://res.cloudinary.com/dtamwfybo/image/upload/v1664560968/eyePalm_23_rgudkq.gif",
 		"https://res.cloudinary.com/dtamwfybo/image/upload/v1664561278/eyePalm_32_apkz0i.gif",
+		"https://res.cloudinary.com/dtamwfybo/image/upload/v1665509216/eyePalm_45_jlzw7v.gif",
+		"https://res.cloudinary.com/dtamwfybo/image/upload/v1664560705/eyePalm_26_ecapfg.gif",
 	  ],
 	},
 	hands: {
@@ -200,7 +202,6 @@ const state = {
 	  images: [
 		"https://res.cloudinary.com/dtamwfybo/image/upload/v1664558193/eyePalm_5_yyv371.gif", 
 		"https://res.cloudinary.com/dtamwfybo/image/upload/v1664560700/eyePalm_27_bcf3ak.gif",
-		"https://res.cloudinary.com/dtamwfybo/image/upload/v1664560705/eyePalm_26_ecapfg.gif",
 		"https://res.cloudinary.com/dtamwfybo/image/upload/v1664560941/eyePalm_27_qrnlcz.gif",
 		"https://res.cloudinary.com/dtamwfybo/image/upload/v1664561268/eyePalm_29_chggmv.gif",
 		"https://res.cloudinary.com/dtamwfybo/image/upload/v1664561272/eyePalm_30_oaruek.gif",
@@ -211,6 +212,13 @@ const state = {
 		"https://res.cloudinary.com/dtamwfybo/image/upload/v1664563729/eyePalm_39_uug4wg.gif",
 		"https://res.cloudinary.com/dtamwfybo/image/upload/v1664563735/eyePalm_41_dee9bv.gif",
 		"https://res.cloudinary.com/dtamwfybo/image/upload/v1664563732/eyePalm_37_ughlvt.gif",
+		"https://res.cloudinary.com/dtamwfybo/image/upload/v1665509227/eyePalm_49_xh9lop.gif",
+		"https://res.cloudinary.com/dtamwfybo/image/upload/v1665509222/eyePalm_48_bc9voa.gif",
+		"https://res.cloudinary.com/dtamwfybo/image/upload/v1665509219/eyePalm_46_ah9qsn.gif",
+		"https://res.cloudinary.com/dtamwfybo/image/upload/v1665509216/eyePalm_42_wmtca4.gif",
+		"https://res.cloudinary.com/dtamwfybo/image/upload/v1665509216/eyePalm_42_wmtca4.gif",
+		"https://res.cloudinary.com/dtamwfybo/image/upload/v1665509215/eyePalm_47_ducrov.gif",
+		"https://res.cloudinary.com/dtamwfybo/image/upload/v1665509212/eyePalm_43_lrww6g.gif",
 
 	],
 	},
