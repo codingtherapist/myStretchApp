@@ -15,7 +15,7 @@ Note: This web app is still under construction and may display errors when using
 
 ![display of homepage in mobile view with html vscode open next to it](https://res.cloudinary.com/dtamwfybo/image/upload/v1665518366/wire1_cmlcju.png)
 
-![display of homepage in mobile view with html vscode open next to it](public/img/wire2.png)
+![display of homepage in mobile view with html vscode open next to it](https://res.cloudinary.com/dtamwfybo/image/upload/v1665518366/wire2_swux3k.png)
 
 
 
