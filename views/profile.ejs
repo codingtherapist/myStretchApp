@@ -2,30 +2,28 @@
 
 
 <main class="container">
-  <h1 class="mb-5 mt-5"> My Break Journal</h1>
+  <h1 class="mb-5 mt-5"> My Stretch Collection</h1>
+  <p><strong>User Name</strong>: <%= user.userName %></p>
+  <p><strong>Email</strong>: <%= user.email %></p>
     <div class="row justify-content-center">
+      <h2>Welcome to your stretch collection!</h2>
+      <p>Upload photos of stretches you find online and make your own stretch routine collection.<br> This is also a great place to upload photos of you in your own poses to track progress and use as a daily/ weekly stretch journal.</span></p>
       <div class="col-6">
-          <div>
-              <p><strong>User Name</strong>: <%= user.userName %></p>
-              <p><strong>Email</strong>: <%= user.email %></p>
-              <a href="/logout" class=" btn btn-outline-secondary">Logout</a>
-              <a class="btn btn-outline-secondary" href="/">Return to Stretches</a>
-          </div>
           <div class="mt-5">
-      
             <h2>Add a photo</h2>
             <form action="/post/createPost" enctype="multipart/form-data" method="POST">
-              <div class="mb-3">
-                <label for="caption" class="form-label">Caption</label>
-                <textarea class="form-control" id="caption" name="caption"></textarea>
-              </div>
               <div class="mb-3">
                 <label for="imgUpload" class="form-label">Image</label>
                 <input type="file" class="form-control" id="imageUpload" name="file">
               </div>
+              <div class="mb-3">
+                <label for="caption" class="form-label">Caption</label>
+                <textarea class="form-control" id="caption" name="caption"></textarea>
+              </div>
+              
               <button type="submit" class="btn btn-outline-secondary" value="Upload">Submit</button>
-            </form>
-            Note: This web app is in beta testing. At this time you can only post photos with captions. Feel free to add a placeholder photo if you'd like to use this as a journal entry area. The ability to add comments without a photo attachement and to add a profile picture is coming soon :)
+            </form><br><br>
+            Note: This web app is in beta testing. 
             
           </div>
       </div>
