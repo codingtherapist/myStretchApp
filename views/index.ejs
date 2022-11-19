@@ -27,9 +27,10 @@
 				  		<a class="nav-link" href="/profile">My Stretch Collection</a>
 						</li>
 						<li class="nav-item">
-						<a href="/login" id="timerbuttons" >Login</a>
+						<a href="/login">Login</a>
 						</li>
 						<li><a href="/logout">Logout</a></li>
+						<li><a href="/signup">Sign up</a></li>
 			  			</ul>
 					</div>
 		 	 </nav>
@@ -83,24 +84,31 @@
 						<!--MY STRETCH DIARY AREA-->
 				<section class="centerrow" id="" >
 					<h2>Your Stretch Collection</h2>
-					<p> Upload photos to create a bank of your favorite movements to save on your profile!</p>
+					<p> Save stretches from the stretch bank to create your own stretch routine (coming soon)! <br>
+						Upload photos of your own photos to create a bank of your favorite movements on your profile (available now).</p>
 					<form action="/post/createPost" enctype="multipart/form-data" method="POST">
 						<div class="container pb-cmnt-container">
 	  						<label for="caption" class="form-label"></label>
 	  						<textarea class="form-control" id="caption" name="caption">Log in to add stretches to your collection</textarea>
 						</div>
-						<div class="mb-3">
+						<div class="mb-4">
 	  						<label for="imgUpload" class="form-label"></label>
 	  						<input type="file" class="form-control" id="imageUpload" name="file">
 						</div>
 						<button type="submit" class="btn btn-outline-secondary" value="Upload">Submit</button>
   					</form>
-					  <p>Note: This web app is in beta testing. </p>
-					<div class="centerrow">  <a href="/login" id="timerbuttons" >Login</a>
-						<a href="/signup" type="button" >Sign up</a>
-						<a href="/logout" type="button" >Log Out</a></div>
+					  <div>
+						<div class="mb-2">  
+							<!--<a href="/login" id="timerbuttons" >Login</a>
+							<a href="/signup" type="button" >Sign up</a>
+							<a href="/logout" type="button" >Log Out</a>
 					
-					  <img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1668872178/Untitled_600_300_px_kcwsmi.png"  alt="woman meditating"> 
+						</div>-->
+					<img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1668876220/Untitled_600_300_px_1_palz4q.png"  alt="woman meditating"> 
+						</div>
+					</div>
+					  <p>Note: This web app is in beta testing. </p>
+					
   				
   					
 				</section>
@@ -126,11 +134,11 @@
 								<li><a href="https://www.africamincey.com/" target="_blank" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
 							</ul>
 							<p>About the Creator of Your Stretch Break:<br>
-							<p>Africa is a full-stack Software Engineer, Yoga Teacher, and licensed Occupational Therapist.<br>
+							Africa is a full-stack Software Engineer, Yoga Teacher, and licensed Occupational Therapist.<br>
 								 She hopes that this web application will help professionals who use the computer for prolonged periods, stay limber and ready to take on their next challenge. </p>
 							
 						
-							<p>Built with HTML, CSS, Javascript, NodeJS and MongoDB</p><br>
+							<p>Built with HTML, CSS, Javascript, NodeJS and MongoDB</p>
 
 							<p>&copy; Africa Kenyah, 2022</p><br>
 						</div>
