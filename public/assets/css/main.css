@@ -72,7 +72,9 @@ input, select, textarea {
 	appearance: none;
 }
 
-
+.meditate {
+	fill:#1ebdd1;
+}
 /*additions!!!!*/
 li {
 	display: inline;

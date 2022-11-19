@@ -1,151 +1,3 @@
-//timer object
-//}//DECLARE:
-
-const FULL_DASH_ARRAY = 283;
-const WARNING_THRESHOLD = 10;
-const ALERT_THRESHOLD = 5;
-
-const COLOR_CODES = {
-  info: {
-    color: "green",
-  },
-  warning: {
-    color: "orange",
-    threshold: WARNING_THRESHOLD,
-  },
-  alert: {
-    color: "red",
-    threshold: ALERT_THRESHOLD,
-  },
-};
-
-const TIME_LIMIT = 300;
-let timePassed = 0;
-let timeLeft = TIME_LIMIT;
-let timerInterval = null;
-let remainingPathColor = COLOR_CODES.info.color;
-
-document.getElementById("app").innerHTML = `
-<div class="base-timer">
-  <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-    <g class="base-timer__circle">
-      <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
-      <path
-        id="base-timer-path-remaining"
-        stroke-dasharray="283"
-        class="base-timer__path-remaining ${remainingPathColor}"
-        d="
-          M 50, 50
-          m -45, 0
-          a 45,45 0 1,0 90,0
-          a 45,45 0 1,0 -90,0
-        "
-      ></path>
-    </g>
-  </svg>
-  <span id="base-timer-label" class="base-timer__label">${formatTime(
-    timeLeft
-  )}</span>
-</div>
-`;
-
-function onTimesUp() {
-  clearInterval(timerInterval);
-  timerInterval = undefined;
-}
-
-function startTimer() {
-  timerInterval = setInterval(() => {
-    timePassed = timePassed += 1;
-    timeLeft = TIME_LIMIT - timePassed;
-    document.getElementById("base-timer-label").innerHTML =
-      formatTime(timeLeft);
-    setCircleDasharray();
-    setRemainingPathColor(timeLeft);
-
-    if (timeLeft === 0) {
-      onTimesUp();
-      alert("Your 5 minute stretch break is complete!");
-    }
-  }, 1000);
-}
-
-function formatTime(time) {
-  const minutes = Math.floor(time / 60);
-  let seconds = time % 60;
-
-  if (seconds < 10) {
-    seconds = `0${seconds}`;
-  }
-
-  return `${minutes}:${seconds}`;
-}
-
-function setRemainingPathColor(timeLeft) {
-  const { alert, warning, info } = COLOR_CODES;
-  if (timeLeft <= alert.threshold) {
-    document
-      .getElementById("base-timer-path-remaining")
-      .classList.remove(warning.color);
-    document
-      .getElementById("base-timer-path-remaining")
-      .classList.add(alert.color);
-  } else if (timeLeft <= warning.threshold) {
-    document
-      .getElementById("base-timer-path-remaining")
-      .classList.remove(info.color);
-    document
-      .getElementById("base-timer-path-remaining")
-      .classList.add(warning.color);
-  }
-}
-
-function calculateTimeFraction() {
-  const rawTimeFraction = timeLeft / TIME_LIMIT;
-  return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
-}
-
-function setCircleDasharray() {
-  const circleDasharray = `${(
-    calculateTimeFraction() * FULL_DASH_ARRAY
-  ).toFixed(0)} 283`;
-  document
-    .getElementById("base-timer-path-remaining")
-    .setAttribute("stroke-dasharray", circleDasharray);
-}
-
-function starTimer() {
-  if (!timerInterval) startTimer();
-}
-
-function pauseTimer() {
-  onTimesUp();
-}
-function resumeTimer() {
-  console.log(timerInterval);
-  if (!timerInterval) startTimer();
-}
-function resetTimer() {
-  if (timerInterval) {
-    onTimesUp();
-  }
-  timePassed = 0;
-  timeLeft = TIME_LIMIT;
-  timerInterval = null;
-
-  document.getElementById("base-timer-label").innerHTML = formatTime(timeLeft);
-  setCircleDasharray();
-  setRemainingPathColor(timeLeft);
-}
-
-//test 2
-
-
-
-
-
-
-
 //stretch images
 const state = {
 	eyes: {
@@ -223,33 +75,24 @@ const state = {
 	],
 	},
   };
-  // Most JS frameworks have some kind of starting point, an initialization step where things are set up. This is the crude vanilla version of that.
-  
+  // starting point, initialization step 
   function init() {
 	// Going through each item in our state array.
-	// Out of the various looping mechanisms Javascript has to offer, for...in iterates through a JSON object's keys.
+	// for...in iterates through a JSON object's keys.
 	for (const key in state) {
-	  // just good practice to put things in a try/catch. Not mandatory, but recommended.
-	  // it helps you take control of what happens if unexpected errors occur.
-	  // you can set up alternate behaviour, or just a notification for example.
+	  // for unexpected errors 
 	  try {
 		// inside the for...in loop, grab the value of the corresponding current key.
 		const currentStateItem = state[key];
-		// currentStateItem now provides a few things like 'container' and 'uiElement' that you can use to do stuff with... like, send it to querySelector.
+		// currentStateItem provides a few things like 'container' and 'uiElement' that you can use to do stuff with... like, send it to querySelector.
 		const uiElementDOMNode = document.querySelector(
 		  currentStateItem.uiElement
 		);
 		// ... or set an onclick event.
 		currentStateItem.clickListener = uiElementDOMNode.addEventListener(
 		  "click",
-		  // this is a modern JS way of defining a function.
-		  // It's almost the same as saying 'function () {}' except that
-		  // this way '() => {}' makes the scope of the function open so you can use variables
-		  // outside the event listener definition. In this case, we're wanting to pass on
-		  // the currentStatItem to our click event callback function.
-		  // the below method is the only way you can pass variables to the click event callback:
-		  // normally the callback only takes one variable which is the event itself.
-		  // would be helpful to step through this in the Chrome Dev Tools debugger to understand how it works.
+			// pass on the currentStatItem to our click event callback function.
+		  	// normally the callback only takes one variable which is the event itself.
 		  () => {
 			// we pass the key and the value corresponding to that key. We'll need both later on.
 			selectExercise({ key, item: currentStateItem });
@@ -264,9 +107,7 @@ const state = {
   }
   
   function hideEverythingExcept(args) {
-	// Just my own personal practice of passing variables to functions.
-	// this way, I know what they're called.
-	// check https://www.freecodecamp.org/news/how-the-question-mark-works-in-javascript/
+	// passing variables to functions
 	const skipThis = args?.skipThis;
 	// loop through the state again, this time to hide stuff.
 	// an example of how you now benefit from having the state in one place.
@@ -278,7 +119,7 @@ const state = {
 	  currentDOMNode.classList.add("hidden");
 	}
   }
-  
+
   function selectExercise(args) {
 	const key = args?.key;
 	const item = args?.item;
@@ -290,22 +131,151 @@ const state = {
 	// after everything except the subject of the click event is hidden,
 	// change its visibility and image src.
 	if (item) {
-	  // you already figured out how this random pick was made universal.
 	  const randomPick = Math.floor(Math.random() * item.images.length);
-	  // the below is basically copy/paste from your previous code
 	  const currentDOMNode = document.querySelector(item.container);
 	  currentDOMNode.src = `${item.images[randomPick]}`;
 	  currentDOMNode.classList.toggle("hidden");
 	}
-  
-	// TODO: this is where you'll set your countdown timer.
   }
-  
   init();
   
+//timer object
+const fullArray = 283;
+const timerWarning = 10;
+const timerAlert = 5;
 
+const timerColors = {
+  info: {
+    color: "green",
+  },
+  warning: {
+    color: "orange",
+    threshold: timerWarning,
+  },
+  alert: {
+    color: "red",
+    threshold: timerAlert,
+  },
+};
 
+const timerMax = 300;
+let timePassed = 0;
+let timeLeft = timerMax;
+let timerInterval = null;
+let remainingPathColor = timerColors.info.color;
 
+document.getElementById("app").innerHTML = `
+<div class="base-timer">
+  <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <g class="base-timer__circle">
+      <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+      <path
+        id="base-timer-path-remaining"
+        stroke-dasharray="283"
+        class="base-timer__path-remaining ${remainingPathColor}"
+        d="
+          M 50, 50
+          m -45, 0
+          a 45,45 0 1,0 90,0
+          a 45,45 0 1,0 -90,0
+        "
+      ></path>
+    </g>
+  </svg>
+  <span id="base-timer-label" class="base-timer__label">${formatTime(
+    timeLeft
+  )}</span>
+</div>
+`;
+
+function onTimesUp() {
+  clearInterval(timerInterval);
+  timerInterval = undefined;
+}
+
+function startTimer() {
+  timerInterval = setInterval(() => {
+    timePassed = timePassed += 1;
+    timeLeft = timerMax - timePassed;
+    document.getElementById("base-timer-label").innerHTML =
+      formatTime(timeLeft);
+    setCircleDasharray();
+    setRemainingPathColor(timeLeft);
+
+    if (timeLeft === 0) {
+      onTimesUp();
+      alert("Your 5 minute stretch break is complete!");
+    }
+  }, 1000);
+}
+
+function formatTime(time) {
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+
+  if (seconds < 10) {
+    seconds = `0${seconds}`;
+  }
+
+  return `${minutes}:${seconds}`;
+}
+
+function setRemainingPathColor(timeLeft) {
+  const { alert, warning, info } = timerColors;
+  if (timeLeft <= alert.threshold) {
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.remove(warning.color);
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.add(alert.color);
+  } else if (timeLeft <= warning.threshold) {
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.remove(info.color);
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.add(warning.color);
+  }
+}
+
+function calculateTimeFraction() {
+  const rawTimeFraction = timeLeft / timerMax;
+  return rawTimeFraction - (1 / timerMax) * (1 - rawTimeFraction);
+}
+
+function setCircleDasharray() {
+  const circleDasharray = `${(
+    calculateTimeFraction() * fullArray
+  ).toFixed(0)} 283`;
+  document
+    .getElementById("base-timer-path-remaining")
+    .setAttribute("stroke-dasharray", circleDasharray);
+}
+
+function starTimer() {
+  if (!timerInterval) startTimer();
+}
+
+function pauseTimer() {
+  onTimesUp();
+}
+function resumeTimer() {
+  console.log(timerInterval);
+  if (!timerInterval) startTimer();
+}
+function resetTimer() {
+  if (timerInterval) {
+    onTimesUp();
+  }
+  timePassed = 0;
+  timeLeft =  timerMax;
+  timerInterval = null;
+
+  document.getElementById("base-timer-label").innerHTML = formatTime(timeLeft);
+  setCircleDasharray();
+  setRemainingPathColor(timeLeft);
+}
 
 
 
@@ -646,45 +616,4 @@ const state = {
 
 })(jQuery);
 
-
-
-
-
-/*
-const card = document.getElementById('card')
-const button = document.getElementById('button')
-const image = document.querySelector("img")
-
-card.addEventListener('click', flipCard)
-button.addEventListener('click', newCard)
-
-let frontText = "A card from the major arcana" //this matches the text in HTML, but sets it as a variable so we can reassign it
-let backText = "A description of that card's meaning" // ditto
-
-function flipCard(){
-    card.classList.toggle('flipCard')
-    document.getElementById('frontText').innerText = frontText //changes the text to whatever the variable says; can match HTML, or may be reassigned in newCard function
-    document.getElementById('backText').innerText = backText // ditto
-} 
-function newCard(){
-    fetch ("/newCard") //this makes a request to server.js for what exists at /newCard (this is the math.random and the respond.json (majorArcana[math]) stuff
-        .then((response) => response.json()) //server.js responds with that stuff this takes the response and realizes that it is JSON
-        .then((data) => {  // call the stuff data
-            frontText = data.cardFront; //reassigns front text to be the stuff that comes back lablled cardFront (name of card)
-            backText = data.cardBack; // ditto but cardBack (description of card)
-            image.src=data.imgurl;//reassigns image source as imgurl
-            image.alt=data.cardFront;// reassigns image alt text as cardFront (name of card)
-            if(data.reversed === true){
-                image.classList.add('reversed');
-            }else if (data.reversed === false){
-                image.classList.remove("reversed")
-            }
-
-            flipCard()
-            flipCard()//this is the BADDIEST bit. The reassignment doesn't show up until the flip card function runs. So without this, it will still read "a card from major arcana" until you click the card which will change as the animation is running, so I put flipCard() twice so that the function runs, but you end up on the same "face" of the card and it changes the description (and if appropriate adds the image).
-        })
-        .catch (error => {
-            console.log(`error ${error}`)
-        })
-}*/
 
