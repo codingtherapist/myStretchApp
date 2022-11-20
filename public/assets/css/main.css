@@ -105,6 +105,15 @@ li {
 	height: 500px;
 }
 
+.firstsize{
+	width: 30%;
+	padding: 30px;
+}
+
+.fileupload{
+	width: 30%;
+}
+
 #stretchcontainer{
 	
 	display: flex;
@@ -121,6 +130,12 @@ img{
 
 	margin: 20px;
 }
+
+.sectionwrapper{
+	width: 75%;
+
+}
+
 
 /*.hidden {
 	/*display: none;
@@ -204,6 +219,14 @@ img{
 	body {
 		-ms-overflow-style: scrollbar;
 	}
+	@media only screen and (max-width: 600px) {
+		.firstsize{
+			width: 90%;
+		}
+		.fileupload{
+			width: 90%;
+		}
+	}
 
 	@media screen and (max-width: 480px) {
 
@@ -212,6 +235,7 @@ img{
 		}
 
 	}
+
 
 	html {
 		box-sizing: border-box;
@@ -245,7 +269,7 @@ img{
 		@media screen and (max-width: 1680px) {
 
 			html {
-				font-size: 14pt;
+				font-size: 12pt;
 			}
 
 		}
@@ -269,7 +293,7 @@ img{
 		@media screen and (max-width: 360px) {
 
 			html {
-				font-size: 10pt;
+				font-size: 11pt;
 			}
 
 		}
@@ -1940,6 +1964,7 @@ img{
 		}
 
 		@media screen and (max-width: 360px) {
+			
 
 			.row {
 				display: flex;

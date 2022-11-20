@@ -17,133 +17,129 @@
 		  		<nav class="">
 				<a class="navbar-brand" href="/"></a>
 					<div class="" id="navbarNav">
-						<ul class="" id="">
-						<li><img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1668873089/Untitled_40_40_px_1_ngrsjx.png" alt="My Stretch App Logo">Your Stretch Break</a>
-						</li>
-						<li class="nav-item active">
-						<a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-						</li>
-						<li class="nav-item">
-				  		<a class="nav-link" href="/profile">My Stretch Collection</a>
-						</li>
-						<li class="nav-item">
-						<a href="/login">Login</a>
-						</li>
-						<li><a href="/logout">Logout</a></li>
-						<li><a href="/signup">Sign up</a></li>
+						<ul class="nav-item" id="">
+							<li>
+								<img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1668873089/Untitled_40_40_px_1_ngrsjx.png" alt="My Stretch App Logo">Your Stretch Break</a>
+							</li>
+							<li>
+								<a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+							</li>
+							<li>
+				  				<a class="nav-link" href="/profile">My Stretch Collection</a><li>
+							<li>
+								<a href="/login">Login</a>
+							</li>
+							<li>
+								<a href="/logout">Logout</a>
+							</li>
+							<li>
+								<a href="/signup">Sign up</a>
+							</li>
 			  			</ul>
 					</div>
 		 	 </nav>
 		</header>
-		<body class="is-preload">
-				<!-- Wrapper -->
-				<section id="" class="" >
-					<!-- Two -->
-					<div class="firstcontainer spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="">
-						<div class="image">
-							<img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1668872178/Untitled_design_-_2022-11-18T132249.621_iwgwzr.png"  alt="woman meditating"> 
-					</div>
-					<div class="firstcontainer" class="" >
+		<body class="">
+			<!-- Wrapper -->
+			<section class="spotlight style1 content-align-left image-position-center onscroll-image-fade-in" id="stretchcontainer" >
+				<div class="firstcontainer firstsize" >
 						<h1 class="center">Take a 5 Minute Stretch Break</h1>
 						<span>Enjoy these gentle movements specially curated for tech professionals and computer users </span<br>
 						<p class="major"><br>
 						First, start the timer. <br>
 						Then, pick a stretch.<br>
-						Create your own movement routine by uploading stretches to your Stretch Collection.<br></p>	
+						Create your own movement routine by uploading pictures to your Stretch Collection.<br></p>	
+				</div>
+				<div class="selectioncontainer">
+					<img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1668872178/Untitled_design_-_2022-11-18T132249.621_iwgwzr.png"  alt="woman meditating"> 
+				</div>
+			</section>
+			<!--Stretchbox-->
+			<section class="spotlight style1 content-align-left image-position-center onscroll-image-fade-in" id="stretchcontainer" >					
+				<div class="firstcontainer" >
+					<img id="eyesup" class="hidden" src="https://res.cloudinary.com/dtamwfybo/image/upload/v1668872178/Untitled_design_-_2022-11-18T134353.399_xrpnjg.png" />
+				</div>
+				<!-- Timer -->
+				<div class="selectioncontainer">
+					<h2 class=" center">1. Start timer</h2>
+					<div class="center" id="app">
 					</div>
-				</section>
-				<!-- One -->
-				<!--<section class="banner style1 spotlight  image-position-center onscroll-image-fade-in" id="stretchcontainer">-->
-				<section class="spotlight style1 content-align-left image-position-center onscroll-image-fade-in" id="stretchcontainer" >					
-					<div class="" class="firstcontainer" >
-						<img id="eyesup" class="hidden" src="https://res.cloudinary.com/dtamwfybo/image/upload/v1668872178/Untitled_design_-_2022-11-18T134353.399_xrpnjg.png" />
+					<div class="center" id="">
+						<input type="button" onclick="starTimer()" value="Start" />
+						<input type="button" " onclick="pauseTimer()" value="Pause"/>
+						<input type="button" onclick="resetTimer()" value="Reset" /><br><br>
+					</div><br><br>
+					<!-- Stretchbox -->
+					<div class="bodypartsbox" id="stretchbuttons">
+						<h2 class="center">2. Choose a body part to stretch</h2>
+						<div class= "center" id="timerbuttons" >
+							<input type="button" " id="eyesnext" value="eyes"/>
+							<input type="button" " id="necknext" value="Neck"/>
+							<input type="button" " id="shouldersnext" value="Shoulders"/>
+							<input type="button" " id="handnext" value="Hands"/>
+						</div>							
+						<br><p class="center"> Hold or gently move through each pose for 3-5 breaths</p>
 					</div>
-					<!-- Timer -->
-					<div class="selectioncontainer">
-						<h2 class=" center">1. Start timer</h2>
-						<div class="center" id="app">
-						</div>
-						<div class="center" id="">
-							<input type="button" onclick="starTimer()" value="Start" />
-							<input type="button" " onclick="pauseTimer()" value="Pause"/>
-							<input type="button" onclick="resetTimer()" value="Reset" /><br><br>
-						</div><br><br>
-						<!-- Stretchbox -->
-						<div class="bodypartsbox" id="stretchbuttons">
-							<h2 class="center">2. Choose a body part to stretch</h2>
-							<div class= "center" id="timerbuttons" >
-								<input type="button" " id="eyesnext" value="eyes"/>
-								<input type="button" " id="necknext" value="Neck"/>
-								<input type="button" " id="shouldersnext" value="Shoulders"/>
-								<input type="button" " id="handnext" value="Hands"/>
-							</div>
-							<br><p class="center"> Hold or gently move through each pose for 3-5 breaths</p>
-						</div>
+				</div>
+			</section>
+			<!--MY STRETCH DIARY AREA-->
+			<section class="centerrow" id="" >
+				<h2>Your Stretch Collection</h2>
+				<p> Save photos from the stretch bank to create your own routine (coming soon)! <br>
+					Upload photos of your own to create a bank of your favorite movements on your profile (available now)
+				</p>
+				<form class="fileupload" action="/post/createPost" enctype="multipart/form-data" method="POST">
+					<div class="container pb-cmnt-container">
+	  					<label for="caption" class="form-label"></label>
+	  					<textarea class="form-control" id="caption" name="caption">Log in to add stretches to your collection</textarea>
 					</div>
-				</section>
-						<!--MY STRETCH DIARY AREA-->
-				<section class="centerrow" id="" >
-					<h2>Your Stretch Collection</h2>
-					<p> Save stretches from the stretch bank to create your own stretch routine (coming soon)! <br>
-						Upload photos of your own photos to create a bank of your favorite movements on your profile (available now).</p>
-					<form action="/post/createPost" enctype="multipart/form-data" method="POST">
-						<div class="container pb-cmnt-container">
-	  						<label for="caption" class="form-label"></label>
-	  						<textarea class="form-control" id="caption" name="caption">Log in to add stretches to your collection</textarea>
-						</div>
-						<div class="mb-4">
-	  						<label for="imgUpload" class="form-label"></label>
-	  						<input type="file" class="form-control" id="imageUpload" name="file">
-						</div>
-						<button type="submit" class="btn btn-outline-secondary" value="Upload">Submit</button>
-  					</form>
-						<div class="image">	<img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1668878430/Untitled_design_-_2022-11-19T122455.100_rijsab.png"  alt="woman meditating">
-						</div>
-					 
-					  <p>Note: This web app is in beta testing. </p>
-				</section>
+					<div class="mb-4">
+	  					<label for="imgUpload" class="form-label"></label>
+						<input type="file" class="form-control" id="imageUpload" name="file">
+					</div>
+					<button type="submit" class="btn btn-outline-secondary" value="Upload">Submit</button>
+  				</form>
+				<div class="image">	
+					<img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1668876220/Untitled_600_300_px_1_palz4q.png"  alt="woman meditating">
+				</div>
+				<p>Note: This web app is in beta testing. </p>
+			</section>
 
-  					<!--<div class="mt-1">
-					<h2>Add a comment</h2>
-					<form action="/comment/createComment" method="POST">
-	 				 <div class="mb-3">
-		 			 <label for="comment" class="form-label">Comment</label>
-		 		 	<input type="text" class="form-control" id="comment" name="comment">
-	  				</div>
-	  				<button type="submit" class="btn btn-outline-secondary">Submit</button>
-					</form>
-  					</div>
-					</section>-->
-				<!-- Footer -->
-					<footer class="wrapper style1 align-center">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="https://www.youtube.com/channel/UCiaMi-uLijoOEPT0lfaQCvw" target="_blank" class="icon brands style2 fa-youtube"><span class="label">Youtube</span></a></li>
-								<!--<li><a href="http://www.twitter.com/africakenyah" target="_blank" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>-->
-								<li><a href="http://www.linkedin.com/in/africamincey" target="_blank" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-								<li><a href="https://www.africamincey.com/" target="_blank" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
-							</ul>
-							<p>About the Creator of Your Stretch Break:<br>
-							Africa is a full-stack Software Engineer, Yoga Teacher, and licensed Occupational Therapist.<br>
-								 She hopes that this web application will help professionals who use the computer for prolonged periods, stay limber and ready to take on their next challenge. </p>
-							
-						
-							<p>Built with HTML, CSS, Javascript, NodeJS and MongoDB</p>
-
-							<p>&copy; Africa Kenyah, 2022</p><br>
-						</div>
-					</footer>
-				<!-- Scripts -->
-				<!--Bootstrap-->
-				<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-				<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-				<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-				<script src="assets/js/jquery.min.js"></script>
-				<script src="assets/js/jquery.scrollex.min.js"></script>
-				<script src="assets/js/jquery.scrolly.min.js"></script>
-				<script src="assets/js/browser.min.js"></script>
-				<script src="assets/js/breakpoints.min.js"></script>
-				<script src="assets/js/util.js"></script>
-				<script src="assets/js/main.js"></script>
-		</body>
+			<!-- Footer -->
+			<footer class="wrapper style1 align-center">
+				<div class="inner">
+					<ul class="icons">
+						<li>
+							<a href="https://www.youtube.com/channel/UCiaMi-uLijoOEPT0lfaQCvw" target="_blank" class="icon brands style2 fa-youtube"><span class="label">Youtube</span></a>
+						</li>
+						<!--<li>
+							<a href="http://www.twitter.com/africakenyah" target="_blank" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a>
+						</li>-->
+						<li>
+							<a href="http://www.linkedin.com/in/africamincey" target="_blank" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a>
+						</li>
+						<li>
+							<a href="https://www.africamincey.com/" target="_blank" class="icon style2 fa-envelope"><span class="label">Email</span></a>
+						</li>
+					</ul>
+					<p>About the Creator of Your Stretch Break:<br>
+						Africa is a full-stack Software Engineer, Yoga Teacher, and licensed Occupational Therapist.<br>
+						She hopes that this web application will help professionals who use the computer for prolonged periods, stay limber and ready to take on their next challenge. </p>
+					<p>Built with HTML, CSS, Javascript, NodeJS and MongoDB</p>
+					<p>&copy; Africa Kenyah, 2022</p><br>
+				</div>
+			</footer>
+			<!-- Scripts -->
+			<!--Bootstrap-->
+			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+			<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+			<script src="assets/js/jquery.min.js"></script>				
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
 </html>
