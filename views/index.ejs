@@ -57,7 +57,7 @@
 			<!--Stretchbox-->
 			<section class="spotlight style1 content-align-left image-position-center onscroll-image-fade-in" id="stretchcontainer" >					
 				<div class="firstcontainer" >
-					<img id="eyesup" class="hidden" src="https://res.cloudinary.com/dtamwfybo/image/upload/v1668872178/Untitled_design_-_2022-11-18T134353.399_xrpnjg.png" />
+					<img id="eyesup" class="hidden" src="https://res.cloudinary.com/dtamwfybo/image/upload/v1668872178/Untitled_design_-_2022-11-18T134353.399_xrpnjg.png" alt="woman seated with hands together at chest" />
 				</div>
 				<!-- Timer -->
 				<div class="selectioncontainer">
@@ -86,23 +86,31 @@
 			<section class="centerrow" id="" >
 				<h2>Your Stretch Collection</h2>
 				<p> Save photos from the stretch bank to create your own routine (coming soon)! <br>
-					Upload photos of your own to create a bank of your favorite movements on your profile (available now)
-				</p>
-				<form class="fileupload" action="/post/createPost" enctype="multipart/form-data" method="POST">
+					Upload photos of your own to create a bank of your favorite movements on your profile (available now).
+	
+				<!--<form class="fileupload" action="/post/createPost" enctype="multipart/form-data" method="POST">
 					<div class="container pb-cmnt-container">
-	  					<label for="caption" class="form-label"></label>
+	  					<label for="photo caption" class="form-label">Upload Image</label>
 	  					<textarea class="form-control" id="caption" name="caption">Log in to add stretches to your collection</textarea>
 					</div>
 					<div class="mb-4">
-	  					<label for="imgUpload" class="form-label"></label>
-						<input type="file" class="form-control" id="imageUpload" name="file">
+	  					<label for="imgage Upload" class="form-label"></label>
+						<input type="file" class="form-control" id="image Upload" name="file">
 					</div>
 					<button type="submit" class="btn btn-outline-secondary" value="Upload">Submit</button>
-  				</form>
-				<div class="image">	
-					<img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1668876220/Untitled_600_300_px_1_palz4q.png"  alt="woman meditating">
+  				</form>-->
+				<div class="image centerrow">	
+					<img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1668876220/Untitled_600_300_px_1_palz4q.png"  alt="woman meditating"><Br><br>
 				</div>
-				<p>Note: This web app is in beta testing. </p>
+				<div  class="centerrow">
+					<a href="/login">
+					<button class="btn btn-primary btn-lg">Log In</button>
+					</a>
+					<a href="/signup">
+					<button class="btn btn-primary btn-lg">Create Profile</button>
+					</a>
+				</div>
+				<p><Br><br>Note: This web app is in beta testing. </p>
 			</section>
 
 			<!-- Footer -->
