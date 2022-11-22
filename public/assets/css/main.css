@@ -114,7 +114,7 @@ li {
 	width: 30%;
 }
 
-#stretchcontainer{
+.stretchcontainer{
 	
 	display: flex;
   align-items: center;
