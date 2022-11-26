@@ -105,6 +105,9 @@ li {
   justify-content: center;
 }
 
+
+
+
 .centerrow{
 	margin: auto;
 	width: 75%;
@@ -289,6 +292,31 @@ img{
 		}
 
 /* Type */
+.timerbuttons{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+	@media screen and (max-width: 736px) {
+
+		.timerbuttons {
+			margin: auto;
+			display: block;
+		}
+
+	}
+
+	@media screen and (max-width: 360px) {
+
+		.timerbuttons {
+			margin: auto;
+			display: block;
+		}
+
+	}
+
 .selectioncontainer{
 	margin: 0;
 	max-width:40%;
@@ -401,6 +429,7 @@ img{
 			}
 	
 		}
+	
 
 	html {
 		font-size: 18pt;
@@ -425,7 +454,7 @@ img{
 		@media screen and (max-width: 736px) {
 
 			html {
-				font-size: 11pt;
+				font-size: 14pt;
 			}
 
 		}
@@ -433,7 +462,7 @@ img{
 		@media screen and (max-width: 360px) {
 
 			html {
-				font-size: 11pt;
+				font-size: 14pt;
 			}
 
 		}
