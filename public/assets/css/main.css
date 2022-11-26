@@ -152,7 +152,7 @@ img{
 .endcontainer{
 	/*margin: 20px;*/
 	margin: 0 auto;
-	max-width:40%;
+	max-width:30%;
 	max-height:100%;
 	margin: auto;
 	display: block;
@@ -348,7 +348,7 @@ img{
 
 	.endcontainer{
 		margin: 0 auto;
-		max-width:40%;
+		max-width:30%;
 		max-height:100%;
 		margin: auto;
 		display: block;
@@ -358,7 +358,7 @@ img{
 	
 			.endcontainer {
 				margin: 0 auto;
-				max-width:40%;
+				max-width:30%;
 				max-height:100%;
 				margin: auto;
 				display: block;
@@ -370,7 +370,7 @@ img{
 	
 			.endcontainer {
 				margin: 0 auto;
-				max-width:40%;
+				max-width:30%;
 				max-height:100%;
 				margin: auto;
 				display: block;
@@ -382,7 +382,7 @@ img{
 	
 			.endcontainer {
 				margin: 0 auto;
-				max-width:100%;
+				max-width:80%;
 				max-height:100%;
 				margin: auto;
 				display: block;
@@ -394,7 +394,7 @@ img{
 	
 			.endcontainer {
 				margin: 0 auto;
-				max-width:90%;
+				max-width:100%;
 				max-height:100%;
 				margin: auto;
 				display: block;
