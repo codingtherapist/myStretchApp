@@ -1,16 +1,77 @@
-<%- include('partials/header') -%>
+<!DOCTYPE HTML>
+<html>
+	<html lang="en">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<head>
+		<title>Your Stretch Break</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />	
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+		<link rel="stylesheet" href="assets/css/style.css" />
+		<!--Bootstrap
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+	</head>
+  <header class="header">
+  <div class="brand">
+    <div id="nav-burger" class="nav-burger is-active">
+    <img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1669549635/hamburger-button_j9fikl.png" alt="Menu" class="nav-icon">
+    </div>
+   <a href="/" class="brand-logo">
+    <img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1669548981/Untitled_40_40_px_3_uowzta.png" alt="Logo">
+   </a>
+    <div id="nav-search" class="nav-search is-hidden">
+    <input type="search" id="nav-search-bar" placeholder="Search">
+    
+    <img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1669549940/cancel-button_jxswqp.png" alt="" id="nav-search-cancel" class="nav-icon">
+    </div>
+  </div>
+  <nav id="nav" class="nav">
+    <div id="nav-cancel" class="nav-cancel">
+    <img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1669549940/cancel-button_jxswqp.png" alt="logo" class="nav-icon">
+    </div>
+    <a class="nav-link" href="/">Home </a>
+    <a class="nav-link" href="/profile">My Stretch Collection</a>
+    <a href="/login" class="nav-link"> Login</a>
+    <a href="/logout" class="nav-link">Logout</a>
+    <a href="/signup" class="nav-link">Sign up</a>
+  </nav>
+  </header>
 
 
-<main class="container">
-  <h1 class="mb-5 mt-5"> My Stretch Collection</h1>
-  <p><strong>User Name</strong>: <%= user.userName %></p>
-  <p><strong>Email</strong>: <%= user.email %></p>
-    <div class="row justify-content-center">
-      <h2>Welcome to your stretch collection!</h2>
-      <p>Upload photos of stretches you find online and make your own stretch routine collection.<br> This is also a great place to upload photos of you in your own poses to track progress and use as a daily/ weekly stretch journal.</span></p>
-     
-      <div class="col-6">
-        <img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1668872178/Untitled_design_-_2022-11-18T133322.097_unc7pw.png"  alt="woman meditating"  width="300" height="300"> 
+
+
+
+
+
+  <section class="container">
+    <div class="centerrow">
+      <div class="col-6 mt-5">
+       <h1 class=""> My Stretch Collection</h1>
+      <p><strong>User Name</strong>: <%= user.userName %></p>
+     <p><strong>Email</strong>: <%= user.email %></p>
+    </div>
+  </div>
+  </section>
+
+  <section class="spotlight style1 content-align-left image-position-center onscroll-image-fade-in stretchcontainer" >
+    <div class="firstcontainer firstsize" >
+      <h2 class="center">Welcome to your stretch collection!</h2>
+      <span>Upload photos of stretches you find online and make your own stretch routine collection.
+    </span<br>
+      <p class="major"><br>
+        This is also a great place to upload photos of you in your own poses to track progress and use as a daily/ weekly stretch journal.
+      </p>
+    </div>
+    <div class="selectioncontainer">
+      <img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1669501486/Untitled_design_-_2022-11-26T172925.648_jds1qr.png"  alt="woman on office chair stretching"> 
+    </div>
+    </section>
+
+    <section class="container">
+      <div class="centerrow">
           <div class="mt-5">
             <h2>Add a photo</h2>
             <form action="/post/createPost" enctype="multipart/form-data" method="POST">
@@ -29,6 +90,7 @@
             
           </div>
       </div>
+    </section>
      
      <!-- <h2>Add a comment</h2>
       <form action="/comment/createComment/" method="POST">
@@ -79,7 +141,29 @@
         </ul> 
       </div>  
     </div>
-
+    </div>
+  </div>
   </main>
-
-<%- include('partials/footer') -%>
+  <hr class="solid">
+<!-- Footer -->
+<footer class="wrapper style1 align-center">
+    <p>Built with HTML, CSS, Javascript, NodeJS and MongoDB</p>
+    <p>&copy; Africa Kenyah, 2022</p><br>
+  </div>
+</footer>
+</footer>
+<!-- Scripts -->
+<!--Bootstrap-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="assets/js/jquery.min.js"></script>	
+<script src="assets/js/script.js"></script>			
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

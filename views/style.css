@@ -3,7 +3,10 @@
 * {
   box-sizing: border-box;
 }
-
+body {
+margin: 0;
+font-family: 'Open Sans', sans-serif;
+}
 
 .header {
   padding: 1rem 1rem 1rem 1rem;
@@ -21,12 +24,10 @@
   align-items: center;
   padding: 10px 10px;
 }
-
 .brand-logo {
   text-decoration: none;
   color: #212529;
   font-size: 1.7rem;
-  
 }
 .nav-burger, {
   display: none;
@@ -142,10 +143,7 @@
 /* End of Helper classes  */
 
 
-/* Solid border */
-.solid {
-    border-top: 1px solid #bbb;
-  }
+
 
 
 

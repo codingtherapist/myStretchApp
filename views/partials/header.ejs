@@ -23,40 +23,34 @@
       integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
       crossorigin="anonymous"
     />
-  <link rel="stylesheet" href="../../css/custom.min.css" />	
+  <link rel="stylesheet" href="../../css/custom.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  
   </head>
   <body>
-    <header class="container">
-        <div class="text-center">
-       
-      </div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5 mt-5">
-        <a class="navbar-brand" href="#"></a>
-        <img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1668873089/Untitled_40_40_px_1_ngrsjx.png" alt="logo" border="0">
-           Your Stretch Break
-          </a>
-        <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-       <div class="collapse navbar-collapse" id="navbarNav">-->
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/profile">My Stretch Bank</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/logout">Logout</a>
-              </li>
-        
-            <!--<li class="nav-item">
-              <a class="nav-link" href="/feed">Feed</a>
-            </li>
-            <li><a class="nav-link"href="/logout">Logout</a></li>-->
-          </ul>
-        </div>
-      </nav>
-    </header>
-  </body>
-</html>
+    <header class="header">
+			<div class="brand">
+			  <div id="nav-burger" class="nav-burger is-active">
+				<img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1669549635/hamburger-button_j9fikl.png" alt="Menu" class="nav-icon">
+			  </div>
+			 <a href="/" class="brand-logo">
+				<img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1669548981/Untitled_40_40_px_3_uowzta.png" alt="Logo">
+			 </a>
+			  <div id="nav-search" class="nav-search is-hidden">
+				<input type="search" id="nav-search-bar" placeholder="Search">
+				
+				<img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1669549940/cancel-button_jxswqp.png" alt="" id="nav-search-cancel" class="nav-icon">
+			  </div>
+			</div>
+			<nav id="nav" class="nav">
+			  <div id="nav-cancel" class="nav-cancel">
+				<img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1669549940/cancel-button_jxswqp.png" alt="logo" class="nav-icon">
+			  </div>
+				<a class="nav-link" href="/">Home </a>
+				<a class="nav-link" href="/profile">My Stretch Collection</a>
+				<a href="/login" class="nav-link"> Login</a>
+				<a href="/logout" class="nav-link">Logout</a>
+				<a href="/signup" class="nav-link">Sign up</a>
+			</nav>
+		  </header>
+	  
