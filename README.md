@@ -10,6 +10,8 @@ Note: This web app is still under construction and may display errors when using
 
 ![display of homepage of your stretch app application showing a woman stretching on laptop view with caption "Take a 5 minute stretch break", 5 minute timer, and buttons for body parts neck, shoulders, hands, eyes](https://res.cloudinary.com/dtamwfybo/image/upload/v1669638026/Screen_Shot_2022-11-28_at_6.55.53_AM_euuknn.png) <br><br>
 
+![screen recording of homepage showing tretches for eyes, shoulders, hands and neck](https://res.cloudinary.com/dtamwfybo/image/upload/v1669638508/Untitled_design_10_fftnv9.gif) <br><br>
+
 ![screenshot of homepage showing man at computer desk with thought bubbble "less pain more coding"](https://res.cloudinary.com/dtamwfybo/image/upload/v1669638108/Screen_Shot_2022-11-28_at_6.56.00_AM_ln7cty_f7b829.png) <br><br>
 
 
