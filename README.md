@@ -6,17 +6,9 @@ Link to project: https://www.yourstretchbreak.com/
 
 Note: This web app is still under construction and may display errors when using the live link.
 
+![display of homepage in mobile view with html vscode open next to it](https://res.cloudinary.com/dtamwfybo/image/upload/v1669636679/Screen_Shot_2022-11-28_at_6.55.34_AM_-_Edited_mbvc9l.png)<br><br>
 
-
-![display of homepage of my stretch app application showing a woman stretching on laptop view with caption "Take a 5 minute stretch break", 5 minute timer, and buttons for body parts neck, shoulders, hands, eyes](public/img/mystretchapp.png)<br><br>
-
-![display of homepage in mobile view with html vscode open next to it](https://res.cloudinary.com/dtamwfybo/image/upload/v1665518880/Untitled_design_3_qrni9s.gif)
-<br><br>
-
-
-
-
-
+![display of homepage of my stretch app application showing a woman stretching on laptop view with caption "Take a 5 minute stretch break", 5 minute timer, and buttons for body parts neck, shoulders, hands, eyes](https://res.cloudinary.com/dtamwfybo/image/upload/v1669636743/Screen_Shot_2022-11-28_at_6.56.00_AM_ln7cty_f7b829.png)<br><br>
 
 ## How It's Made:
 Tech used: HTML, CSS, JavaScript, Nodejs, Express, MongoDB
@@ -40,13 +32,14 @@ NodeJS was used for all backend routes
 ![display of homepage in mobile view with html vscode open next to it](https://res.cloudinary.com/dtamwfybo/image/upload/v1665518366/wire2_swux3k.png)
 
 
-## Optimizations To be added:
+## Optimizations being added:
+- Moving database from MongoDB to MySQL
 - Backend functions including bringing timer and stretch function serverside
 - Creating a database of images and gifs that include yoga poses categorized by body part to increase speed and efficiency
 - Adding ability to add stretches to database for other users to try
 - Adding a social feed
 - Creating ability to upload comments without needing to upload photo
-- Adding React
+- Transferring from EJS frontend to React framework
 - Updating HTML for accessibility
 - Simplifying functions for more efficiency
 
