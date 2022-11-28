@@ -8,7 +8,7 @@ Note: This web app is still under construction and may display errors when using
 
 ![display of homepage in mobile view with html vscode open next to it](https://res.cloudinary.com/dtamwfybo/image/upload/v1669636679/Screen_Shot_2022-11-28_at_6.55.34_AM_-_Edited_mbvc9l.png)<br><br>
 
-![display of homepage of my stretch app application showing a woman stretching on laptop view with caption "Take a 5 minute stretch break", 5 minute timer, and buttons for body parts neck, shoulders, hands, eyes](https://res.cloudinary.com/dtamwfybo/image/upload/v1669636743/Screen_Shot_2022-11-28_at_6.56.00_AM_ln7cty_f7b829.png)<br><br>
+![display of homepage of my stretch app application showing a woman stretching on laptop view with caption "Take a 5 minute stretch break", 5 minute timer, and buttons for body parts neck, shoulders, hands, eyes](https://res.cloudinary.com/dtamwfybo/video/upload/v1669637325/Screen_Recording_2022-11-28_at_6.56.15_AM_uxdiuy.mov)<br><br>
 
 ## How It's Made:
 Tech used: HTML, CSS, JavaScript, Nodejs, Express, MongoDB
