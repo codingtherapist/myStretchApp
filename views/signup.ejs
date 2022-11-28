@@ -17,19 +17,20 @@
   <header class="header">
     <div class="brand">
       <div id="nav-burger" class="nav-burger is-active">
-        <img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1669549635/hamburger-button_j9fikl.png" alt="Menu" class="nav-icon">
+      <img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1669549635/hamburger-button_j9fikl.png" alt="Menu" class="nav-icon">
       </div>
-      <a href="/" class="brand-logo">
+     <a href="/" class="brand-logo">
       <img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1669548981/Untitled_40_40_px_3_uowzta.png" alt="Logo">
-      </a>
+     </a>
       <div id="nav-search" class="nav-search is-hidden">
-        <input type="search" id="nav-search-bar" placeholder="Search">
-        <img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1669549940/cancel-button_jxswqp.png" alt="" id="nav-search-cancel" class="nav-icon">
+      <input type="search" id="nav-search-bar" placeholder="Search">
+      
+      <img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1669549940/cancel-button_jxswqp.png" alt="" id="nav-search-cancel" class="nav-icon">
       </div>
     </div>
     <nav id="nav" class="nav">
       <div id="nav-cancel" class="nav-cancel">
-        <img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1669549940/cancel-button_jxswqp.png" alt="logo" class="nav-icon">
+      <img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1669549940/cancel-button_jxswqp.png" alt="logo" class="nav-icon">
       </div>
       <a class="nav-link" href="/">Home </a>
       <a class="nav-link" href="/profile">My Stretch Collection</a>
@@ -37,14 +38,60 @@
       <a href="/logout" class="nav-link">Logout</a>
       <a href="/signup" class="nav-link">Sign up</a>
     </nav>
-  </header>
-  <main class="container">
+    </header>
+  
+  <section class="center">
+    <h1>Sign up</h1>
+  </section>
+
+
+  <main class="spotlight style1 content-align-left image-position-center onscroll-image-fade-in stretchcontainer" >
+    <div class="firstcontainer firstsize" >
+      <p>Your stretch collection on demand</p>
+              <% if (locals.messages.errors) { %>
+                <% messages.errors.forEach( el => { %>
+                  <div class="alert alert-danger"><%= el.msg %></div>
+                    <% }) %>    
+                    <% } %>
+                    <% if (locals.messages.info) { %>
+                    <% messages.info.forEach( el => { %>
+                        <div class="alert alert-info"><%= el.msg %></div>
+                    <% }) %>    
+                    <% } %>
+                  <form action="/signup" method="POST">
+                    <div class="mb-3">
+                        <label for="userName" class="form-label">User Name</label>
+                        <input type="text" class="form-control" id="userName" name="userName">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="password" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="password" name="password">
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
+                    <br></div>
+                    <button type="submit" class="btn btn-outline-secondary">Submit</button>
+                  </form>
+        </div>
+    <div class="selectioncontainer">
+     
+      <img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1669599998/stretcj_5_mkjpag.png"  alt="man sitting at desk using computer"  width="" height=""><br> 
+    </div>
+  </main>
+  <!--<main class="container">
       <div class="centerrow">
           <div class="col-6 mt-5">
             <h1 class="centerrow"> Sign Up</h1>
              <div>
-              <img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1669494237/Untitled_design_31_azijgq.jpg"  alt="woman meditating"  width="" height=""><br><br><br> </div>
-                <% if (locals.messages.errors) { %>
+              <img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1669599998/stretcj_5_mkjpag.png"  alt="man sitting at desk using computer"  width="" height=""><br><br><br> </div>
+              <h2>Your stretch collection on demand</h2>
+              <% if (locals.messages.errors) { %>
                 <% messages.errors.forEach( el => { %>
                   <div class="alert alert-danger"><%= el.msg %></div>
                     <% }) %>    
@@ -77,7 +124,7 @@
            
           </div>
         </div>
-    </main>
+    </main>-->
 	  <hr class="solid">
     <footer class="wrapper style1 align-center">
 

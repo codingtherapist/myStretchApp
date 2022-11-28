@@ -41,7 +41,51 @@
   </header>
 
 <title>Login</title>
-<main class="container">
+<h1 class="center">Log In</h1>
+<main class="spotlight style1 content-align-left image-position-center onscroll-image-fade-in stretchcontainer" >
+
+  <div class="firstcontainer firstsize" >
+    <h2>Welcome back!</h2>
+    <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
+      <div class="alert alert-danger"><%= el.msg %></div>
+      <% }) %> <% } %> <% if (locals.messages.info) { %> <%
+      messages.info.forEach( el => { %>
+      <div class="alert alert-info"><%= el.msg %></div>
+      <% }) %> <% } %>
+      <form action="/login" method="POST">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Email address</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            name="email"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            name="password"
+          />
+        </div><Br>
+        <button type="submit" class="btn btn-outline-secondary">Submit</button>
+        </form>
+        <p>Need to sign up?</p>
+<a href="/signup" type="button" >Create an account</a><Br><Br>
+  </div>
+  <div class="selectioncontainer">
+    <img src="https://res.cloudinary.com/dtamwfybo/image/upload/v1669494237/Untitled_design_31_azijgq.jpg"  alt="woman at desk with laptop and thought bubble with caption time for a break!"> <br>
+  </div>
+</main>
+
+
+<!--<main class="container">
   <div class="centerrow">
     <section class="col-6 mt-5">
       <h1>Log In</h1>
@@ -75,12 +119,9 @@
           />
         </div><Br>
         <button type="submit" class="btn btn-outline-secondary">Submit</button>
-      </form>
-      <p>Need to sign up?</p>
-      <a href="/signup" type="button" >Create an account</a><Br><Br>
-    </section>
-  </div>
-</main>
+      </form>-->
+
+ 
 <hr class="solid">
 <!-- Footer -->
 <footer class="wrapper style1 align-center">
